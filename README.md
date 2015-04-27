@@ -1,71 +1,71 @@
-ÌÚÑ¶ĞÅ¸ë ÍÆËÍ
-- 1 ÌîĞ´¡°Ó¦ÓÃÃû³Æ¡±ºÍ¡°Ó¦ÓÃ°üÃû¡±£¨±ØĞëÒª¸úAPPÒ»ÖÂ£©£¬Ñ¡Ôñ¡°²Ù×÷ÏµÍ³¡±ºÍ¡°·ÖÀà¡±£¬×îºóµã»÷¡°´´½¨Ó¦ÓÃ¡±¡£
-Ó¦ÓÃ´´½¨³É¹¦ºó£¬µã»÷¡°Ó¦ÓÃÅäÖÃ¡±¼´¿É¿´µ½
-°üÃû com.qq.xgdemo
+è…¾è®¯ä¿¡é¸½ æ¨é€
+- 1 å¡«å†™â€œåº”ç”¨åç§°â€å’Œâ€œåº”ç”¨åŒ…åâ€ï¼ˆå¿…é¡»è¦è·ŸAPPä¸€è‡´ï¼‰ï¼Œé€‰æ‹©â€œæ“ä½œç³»ç»Ÿâ€å’Œâ€œåˆ†ç±»â€ï¼Œæœ€åç‚¹å‡»â€œåˆ›å»ºåº”ç”¨â€ã€‚
+åº”ç”¨åˆ›å»ºæˆåŠŸåï¼Œç‚¹å‡»â€œåº”ç”¨é…ç½®â€å³å¯çœ‹åˆ°
+åŒ…å com.qq.xgdemo
 AccessId 2100101929
 AccessKey A45VE55D5WKX
-- 2 Androidmanifest.xml£¬Ìí¼ÓÒÔÏÂÅäÖÃ£¨½¨Òé²Î¿¼ÏÂÔØ°üµÄDemoĞŞ¸Ä£©£¬ÆäÖĞYOUR_ACCESS_IDºÍYOUR_ACCESS_KEY
-Ìæ»»ÎªAPP¶ÔÓ¦µÄaccessIdºÍaccessKey,ÇëÈ·±£°´ÕÕÒªÇóÅäÖÃ£¬·ñÔò¿ÉÄÜµ¼ÖÂ·şÎñ²»ÄÜÕı³£Ê¹ÓÃ¡£ 
+- 2 Androidmanifest.xmlï¼Œæ·»åŠ ä»¥ä¸‹é…ç½®ï¼ˆå»ºè®®å‚è€ƒä¸‹è½½åŒ…çš„Demoä¿®æ”¹ï¼‰ï¼Œå…¶ä¸­YOUR_ACCESS_IDå’ŒYOUR_ACCESS_KEY
+æ›¿æ¢ä¸ºAPPå¯¹åº”çš„accessIdå’ŒaccessKey,è¯·ç¡®ä¿æŒ‰ç…§è¦æ±‚é…ç½®ï¼Œå¦åˆ™å¯èƒ½å¯¼è‡´æœåŠ¡ä¸èƒ½æ­£å¸¸ä½¿ç”¨ã€‚ 
 <application
-   <!-- APPÏîÄ¿µÄÆäËüÅäÖÃ... -->
+   <!-- APPé¡¹ç›®çš„å…¶å®ƒé…ç½®... -->
 
-   <!-- ¡¾±ØĞë¡¿ ĞÅ¸ëreceiver¹ã²¥½ÓÊÕ -->
+   <!-- ã€å¿…é¡»ã€‘ ä¿¡é¸½receiverå¹¿æ’­æ¥æ”¶ -->
     <receiver
         android:name="com.tencent.android.tpush.XGPushReceiver"
         android:process=":xg_service_v2" >
         <intent-filter android:priority="0x7fffffff" >
-            <!-- ¡¾±ØĞë¡¿ ĞÅ¸ëSDKµÄÄÚ²¿¹ã²¥ -->
+            <!-- ã€å¿…é¡»ã€‘ ä¿¡é¸½SDKçš„å†…éƒ¨å¹¿æ’­ -->
             <action android:name="com.tencent.android.tpush.action.SDK" />
             <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
-            <!-- ¡¾±ØĞë¡¿ ÏµÍ³¹ã²¥£º¿ªÆÁºÍÍøÂçÇĞ»» -->
+            <!-- ã€å¿…é¡»ã€‘ ç³»ç»Ÿå¹¿æ’­ï¼šå¼€å±å’Œç½‘ç»œåˆ‡æ¢ -->
             <action android:name="android.intent.action.USER_PRESENT" />
             <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             
-            <!-- ¡¾¿ÉÑ¡¡¿ Ò»Ğ©³£ÓÃµÄÏµÍ³¹ã²¥£¬ÔöÇ¿ĞÅ¸ëserviceµÄ¸´»î»ú»á£¬Çë¸ù¾İĞèÒªÑ¡Ôñ¡£µ±È»£¬ÄãÒ²¿ÉÒÔÌí¼ÓAPP×Ô¶¨ÒåµÄÒ»Ğ©¹ã²¥ÈÃÆô¶¯service -->
+            <!-- ã€å¯é€‰ã€‘ ä¸€äº›å¸¸ç”¨çš„ç³»ç»Ÿå¹¿æ’­ï¼Œå¢å¼ºä¿¡é¸½serviceçš„å¤æ´»æœºä¼šï¼Œè¯·æ ¹æ®éœ€è¦é€‰æ‹©ã€‚å½“ç„¶ï¼Œä½ ä¹Ÿå¯ä»¥æ·»åŠ APPè‡ªå®šä¹‰çš„ä¸€äº›å¹¿æ’­è®©å¯åŠ¨service -->
             <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
             <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
             <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
         </intent-filter>
     </receiver>
 
-    <!-- ¡¾±ØĞë¡¿ (2.30¼°ÒÔÉÏ°æĞÂÔö)Õ¹Ê¾Í¨ÖªµÄactivity -->
-    <!-- ¡¾×¢Òâ¡¿ Èç¹û±»´ò¿ªµÄactivityÊÇÆô¶¯Ä£Ê½ÎªSingleTop£¬SingleTask»òSingleInstance£¬Çë¸ù¾İÍ¨ÖªµÄÒì³£×Ô²éÁĞ±íµÚ8µã´¦Àí-->
+    <!-- ã€å¿…é¡»ã€‘ (2.30åŠä»¥ä¸Šç‰ˆæ–°å¢)å±•ç¤ºé€šçŸ¥çš„activity -->
+    <!-- ã€æ³¨æ„ã€‘ å¦‚æœè¢«æ‰“å¼€çš„activityæ˜¯å¯åŠ¨æ¨¡å¼ä¸ºSingleTopï¼ŒSingleTaskæˆ–SingleInstanceï¼Œè¯·æ ¹æ®é€šçŸ¥çš„å¼‚å¸¸è‡ªæŸ¥åˆ—è¡¨ç¬¬8ç‚¹å¤„ç†-->
      <activity
          android:name="com.tencent.android.tpush.XGPushActivity"
          android:exported="true" >
          <intent-filter>
-            <!-- ÈôÊ¹ÓÃAndroidStudio£¬ÇëÉèÖÃandroid:name="android.intent.action"-->
+            <!-- è‹¥ä½¿ç”¨AndroidStudioï¼Œè¯·è®¾ç½®android:name="android.intent.action"-->
              <action android:name="" />
          </intent-filter>
     </activity>
 
-    <!-- ¡¾±ØĞë¡¿ ĞÅ¸ëservice -->
+    <!-- ã€å¿…é¡»ã€‘ ä¿¡é¸½service -->
     <service
         android:name="com.tencent.android.tpush.service.XGPushService"
         android:exported="true"
         android:persistent="true"
         android:process=":xg_service_v2" />
  
-    <!-- ¡¾±ØĞë¡¿ Í¨Öªservice£¬´ËÑ¡ÏîÓĞÖúÓÚÌá¸ßµÖ´ïÂÊ -->
+    <!-- ã€å¿…é¡»ã€‘ é€šçŸ¥serviceï¼Œæ­¤é€‰é¡¹æœ‰åŠ©äºæé«˜æŠµè¾¾ç‡ -->
     <service
         android:name="com.tencent.android.tpush.rpc.XGRemoteService"
         android:exported="true" >
         <intent-filter>
-            <action android:name="Ó¦ÓÃ°üÃû.PUSH_ACTION" />
+            <action android:name="åº”ç”¨åŒ…å.PUSH_ACTION" />
         </intent-filter>
     </service>
 
-    <!-- ¡¾±ØĞë¡¿ Çë½«YOUR_ACCESS_IDĞŞ¸ÄÎªAPPµÄAccessId£¬¡°21¡±¿ªÍ·µÄ10Î»Êı×Ö£¬ÖĞ¼äÃ»¿Õ¸ñ -->
+    <!-- ã€å¿…é¡»ã€‘ è¯·å°†YOUR_ACCESS_IDä¿®æ”¹ä¸ºAPPçš„AccessIdï¼Œâ€œ21â€å¼€å¤´çš„10ä½æ•°å­—ï¼Œä¸­é—´æ²¡ç©ºæ ¼ -->
     <meta-data 
         android:name="XG_V2_ACCESS_ID"
         android:value="YOUR_ACCESS_ID" />
-    <!-- ¡¾±ØĞë¡¿ Çë½«YOUR_ACCESS_KEYĞŞ¸ÄÎªAPPµÄAccessKey£¬¡°A¡±¿ªÍ·µÄ12Î»×Ö·û´®£¬ÖĞ¼äÃ»¿Õ¸ñ -->
+    <!-- ã€å¿…é¡»ã€‘ è¯·å°†YOUR_ACCESS_KEYä¿®æ”¹ä¸ºAPPçš„AccessKeyï¼Œâ€œAâ€å¼€å¤´çš„12ä½å­—ç¬¦ä¸²ï¼Œä¸­é—´æ²¡ç©ºæ ¼ -->
     <meta-data 
         android:name="XG_V2_ACCESS_KEY" 
         android:value="YOUR_ACCESS_KEY" />
 </application>
 
-<!-- ¡¾±ØĞë¡¿ ĞÅ¸ëSDKËùĞèÈ¨ÏŞ -->
+<!-- ã€å¿…é¡»ã€‘ ä¿¡é¸½SDKæ‰€éœ€æƒé™ -->
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -81,34 +81,34 @@ AccessKey A45VE55D5WKX
 <uses-permission android:name="android.permission.GET_TASKS" />
 <uses-permission android:name="android.permission.READ_LOGS" />
 <uses-permission android:name="android.permission.VIBRATE" />
-<!-- ¡¾¿ÉÑ¡¡¿ ĞÅ¸ëSDKËùĞèÈ¨ÏŞ -->
+<!-- ã€å¯é€‰ã€‘ ä¿¡é¸½SDKæ‰€éœ€æƒé™ -->
 <uses-permission android:name="android.permission.BLUETOOTH" />
 <uses-permission android:name="android.permission.BATTERY_STATS" />
 
-- 3 ´ò¿ª¹¤³ÌµÄÖ÷Activity£¬ÔÚÆäonCreate(Bundle savedInstanceState)ÖØÔØ·½·¨ÄÚ£¬Ìí¼ÓÒÔÏÂ´úÂë£¬Íê³ÉĞÅ¸ë·şÎñµÄÆô¶¯ÓëAPP×¢²á¹ı³Ì¡£ 
+- 3 æ‰“å¼€å·¥ç¨‹çš„ä¸»Activityï¼Œåœ¨å…¶onCreate(Bundle savedInstanceState)é‡è½½æ–¹æ³•å†…ï¼Œæ·»åŠ ä»¥ä¸‹ä»£ç ï¼Œå®Œæˆä¿¡é¸½æœåŠ¡çš„å¯åŠ¨ä¸APPæ³¨å†Œè¿‡ç¨‹ã€‚ 
 
-// ¿ªÆôlogcatÊä³ö£¬·½±ãdebug£¬·¢²¼Ê±Çë¹Ø±Õ
+// å¼€å¯logcatè¾“å‡ºï¼Œæ–¹ä¾¿debugï¼Œå‘å¸ƒæ—¶è¯·å…³é—­
 // XGPushConfig.enableDebug(this, true);
-// Èç¹ûĞèÒªÖªµÀ×¢²áÊÇ·ñ³É¹¦£¬ÇëÊ¹ÓÃregisterPush(getApplicationContext(), XGIOperateCallback)´øcallback°æ±¾
-// Èç¹ûĞèÒª°ó¶¨ÕËºÅ£¬ÇëÊ¹ÓÃregisterPush(getApplicationContext(),account)°æ±¾
-// ¾ßÌå¿É²Î¿¼ÏêÏ¸µÄ¿ª·¢Ö¸ÄÏ
-// ´«µİµÄ²ÎÊıÎªApplicationContext
+// å¦‚æœéœ€è¦çŸ¥é“æ³¨å†Œæ˜¯å¦æˆåŠŸï¼Œè¯·ä½¿ç”¨registerPush(getApplicationContext(), XGIOperateCallback)å¸¦callbackç‰ˆæœ¬
+// å¦‚æœéœ€è¦ç»‘å®šè´¦å·ï¼Œè¯·ä½¿ç”¨registerPush(getApplicationContext(),account)ç‰ˆæœ¬
+// å…·ä½“å¯å‚è€ƒè¯¦ç»†çš„å¼€å‘æŒ‡å—
+// ä¼ é€’çš„å‚æ•°ä¸ºApplicationContext
 Context context = getApplicationContext();
 XGPushManager.registerPush(context);	
 
-// 2.36£¨²»°üÀ¨£©Ö®Ç°µÄ°æ±¾ĞèÒªµ÷ÓÃÒÔÏÂ2ĞĞ´úÂë
+// 2.36ï¼ˆä¸åŒ…æ‹¬ï¼‰ä¹‹å‰çš„ç‰ˆæœ¬éœ€è¦è°ƒç”¨ä»¥ä¸‹2è¡Œä»£ç 
 Intent service = new Intent(context, XGPushService.class);
 context.startService(service);
 
 
-// ÆäËü³£ÓÃµÄAPI£º
-// °ó¶¨ÕËºÅ£¨±ğÃû£©×¢²á£ºregisterPush(context,account)»òregisterPush(context,account, XGIOperateCallback)£¬ÆäÖĞaccountÎªAPPÕËºÅ£¬¿ÉÒÔÎªÈÎÒâ×Ö·û´®£¨qq¡¢openid»òÈÎÒâµÚÈı·½£©£¬ÒµÎñ·½Ò»¶¨Òª×¢ÒâÖÕ¶ËÓëºóÌ¨±£³ÖÒ»ÖÂ¡£
-// È¡Ïû°ó¶¨ÕËºÅ£¨±ğÃû£©£ºregisterPush(context,"*")£¬¼´account="*"ÎªÈ¡Ïû°ó¶¨£¬½â°óºó£¬¸ÃÕë¶Ô¸ÃÕËºÅµÄÍÆËÍ½«Ê§Ğ§
-// ·´×¢²á£¨²»ÔÙ½ÓÊÕÏûÏ¢£©£ºunregisterPush(context)
-// ÉèÖÃ±êÇ©£ºsetTag(context, tagName)
-// É¾³ı±êÇ©£ºdeleteTag(context, tagName)
+// å…¶å®ƒå¸¸ç”¨çš„APIï¼š
+// ç»‘å®šè´¦å·ï¼ˆåˆ«åï¼‰æ³¨å†Œï¼šregisterPush(context,account)æˆ–registerPush(context,account, XGIOperateCallback)ï¼Œå…¶ä¸­accountä¸ºAPPè´¦å·ï¼Œå¯ä»¥ä¸ºä»»æ„å­—ç¬¦ä¸²ï¼ˆqqã€openidæˆ–ä»»æ„ç¬¬ä¸‰æ–¹ï¼‰ï¼Œä¸šåŠ¡æ–¹ä¸€å®šè¦æ³¨æ„ç»ˆç«¯ä¸åå°ä¿æŒä¸€è‡´ã€‚
+// å–æ¶ˆç»‘å®šè´¦å·ï¼ˆåˆ«åï¼‰ï¼šregisterPush(context,"*")ï¼Œå³account="*"ä¸ºå–æ¶ˆç»‘å®šï¼Œè§£ç»‘åï¼Œè¯¥é’ˆå¯¹è¯¥è´¦å·çš„æ¨é€å°†å¤±æ•ˆ
+// åæ³¨å†Œï¼ˆä¸å†æ¥æ”¶æ¶ˆæ¯ï¼‰ï¼šunregisterPush(context)
+// è®¾ç½®æ ‡ç­¾ï¼šsetTag(context, tagName)
+// åˆ é™¤æ ‡ç­¾ï¼šdeleteTag(context, tagName)
 
-4 Èç¹ûÔÚlogcatÖĞµÄTPush±êÇ©¿´µ½ÒÔÏÂÀàËÆµÄÊä³ö£¬ËµÃ÷ÒÑ¾­×¢²á³É¹¦£¬²¢·µ»Øtoken¡£
+4 å¦‚æœåœ¨logcatä¸­çš„TPushæ ‡ç­¾çœ‹åˆ°ä»¥ä¸‹ç±»ä¼¼çš„è¾“å‡ºï¼Œè¯´æ˜å·²ç»æ³¨å†ŒæˆåŠŸï¼Œå¹¶è¿”å›tokenã€‚
 04-27 13:50:29.922: W/TPush(8523): +++ register push sucess. token:f6e890d82afbddde48538ed574fe4efc9306da0a
 
-5 ·şÎñ¶Ë´´½¨ÍÆËÍ
+5 æœåŠ¡ç«¯åˆ›å»ºæ¨é€
